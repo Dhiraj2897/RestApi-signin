@@ -52,10 +52,4 @@ public class Employee {
         this.empPassword = empPassword;
     }
 
-    public Employee(int empId, String empName, String empEmailId, String empPassword) {
-        this.empId = empId;
-        this.empName = empName;
-        this.empEmailId = empEmailId;
-        this.empPassword = empPassword;
-    }
 }

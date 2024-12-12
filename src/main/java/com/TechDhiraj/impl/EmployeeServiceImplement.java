@@ -6,12 +6,15 @@ import com.TechDhiraj.service.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmployeeServiceImplement implements IEmployeeService {
 
 
     @Autowired
     private EmployeeRepository employeeRepository;
+
 
     @Override
     public Employee signUp(Employee employee) {
@@ -30,4 +33,13 @@ public class EmployeeServiceImplement implements IEmployeeService {
 
         return flag;
     }
+
+    @Override
+    public List<Employee> getAllEmp() {
+        List<Employee> employees = employeeRepository.findAll();
+        return employees;
+
+    }
+
+
 }
